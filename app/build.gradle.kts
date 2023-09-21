@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "one.two.three.four.fairgo5"
+    namespace = "com.ssslotssfair.gopokiess"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "one.two.three.four.fairgo5"
+        applicationId = "com.ssslotssfair.gopokiess"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -56,4 +56,5 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-config-ktx")
+    implementation("com.onesignal:OneSignal:[5.0.0, 5.99.99]")
 }
