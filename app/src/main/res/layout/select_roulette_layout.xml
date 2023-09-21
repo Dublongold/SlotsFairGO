@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="178dp"
+    android:layout_height="210dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="40dp">
+    <ImageView
+        android:id="@+id/wheel_back"
+        android:layout_width="178dp"
+        android:layout_height="178dp"
+        android:src="@drawable/wheel_back"
+        android:contentDescription="@string/wheel_back_info"/>
+
+    <ImageView
+        android:layout_width="151.3dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@id/wheel_back"
+        android:layout_alignBottom="@id/wheel_back"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/wheel_body_info"
+        android:src="@drawable/wheel_body" />
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignTop="@id/wheel_back"
+        android:layout_alignBottom="@id/wheel_back"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wheel_center"
+        android:contentDescription="@string/wheel_center_info"/>
+    
+    <ImageView
+        android:layout_width="10.83dp"
+        android:layout_height="9.29dp"
+        android:src="@drawable/wheel_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8.51dp"
+        android:contentDescription="@string/wheel_arrow_info"/>
+
+    <Button
+        android:id="@+id/roulette_clicker"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/play_button"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/secondary"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:pivotY="50%"
+    android:pivotX="50%">
+    <layer-list>
+        <item>
+            <vector
+                android:width="46dp"
+                android:height="46dp"
+                android:viewportWidth="46"
+                android:viewportHeight="46"
+                >
+                <group>
+                    <clip-path
+                        android:pathData="M2.5 2.5H42.5V42.5H2.5V2.5Z"
+                        />
+                </group>
+                <path
+                    android:pathData="M23 3C34.0458 3 43 11.9543 43 23C43 34.0458 34.0458 43 23 43C11.9543 43 3 34.0458 3 23C3 11.9543 11.9543 3 23 3Z"
+                    android:strokeWidth="5"
+                    android:strokeLineCap="round"
+                    android:strokeColor="#0F442E"
+                    />
+            </vector>
+        </item>
+        <item android:width="26dp" android:height="26dp" android:left="21dp">
+            <vector
+                android:width="26dp"
+                android:height="26dp"
+                android:viewportWidth="26"
+                android:viewportHeight="26"
+                >
+                <group>
+                    <clip-path
+                        android:pathData="M2.5 2.5H22.5V22.5H2.5V2.5Z"
+                        />
+                </group>
+                <path
+                    android:pathData="M3 3C14.0458 3 23 11.9543 23 23"
+                    android:strokeWidth="5"
+                    android:strokeLineCap="round"
+                    android:strokeColor="#FFFFFF"
+                    />
+            </vector>
+        </item>
+    </layer-list>
+</animated-rotate>

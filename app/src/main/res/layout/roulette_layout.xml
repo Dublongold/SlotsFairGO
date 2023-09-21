@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="230dp"
+    android:layout_marginTop="40dp"
+    android:layout_centerHorizontal="true">
+
+    <ImageView
+        android:id="@+id/wheel_back"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:src="@drawable/wheel_back"
+        android:contentDescription="@string/wheel_back_info"/>
+
+    <ImageView
+        android:id="@+id/wheel_body"
+        android:tag="0"
+        android:layout_width="194dp"
+        android:layout_height="203dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/wheel_body_info"
+        android:src="@drawable/wheel_body" />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/wheel_back"
+        android:layout_alignBottom="@id/wheel_back"
+        android:scaleType="centerInside"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wheel_center"
+        android:contentDescription="@string/wheel_center_info"/>
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="12dp"
+        android:src="@drawable/wheel_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:contentDescription="@string/wheel_arrow_info"/>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FFFACE14</color>
+    <color name="secondary">#FF0F442E</color>
+    <color name="container">#CC082C1D</color>
+    <color name="clicker_fore">#44000000</color>
+</resources>

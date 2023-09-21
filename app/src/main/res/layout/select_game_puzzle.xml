@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_info"
+        android:src="@drawable/main_back"
+        android:scaleType="fitXY"/>
+
+    <include layout="@layout/select_pokies_layout"/>
+    <include layout="@layout/select_roulette_layout"/>
+    <ImageButton
+        android:id="@+id/privacy_clicker"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/transparent"
+        android:src="@drawable/privacy_clicker"
+        android:foreground="@drawable/rounded_clicker"
+        android:contentDescription="@string/privacy_clicker_info"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="40dp"/>
+</RelativeLayout>
