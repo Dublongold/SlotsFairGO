@@ -3,7 +3,9 @@
 package one.two.three.four.fairgo5.online
 
 import android.Manifest
+import android.graphics.Bitmap
 import android.net.Uri
+import android.os.Message
 import android.util.Log
 import android.webkit.CookieManager
 import android.webkit.ValueCallback
@@ -77,6 +79,12 @@ class SingleViewInstaller(
     }
 
     inner class SingleWebClient : WebViewClient() {
+        private var pageState = -1
+
+
+        private val pageStarted = 1
+        private val pageCommitVisible = 1
+        private val pageFinished = 3
         override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
             val uri = request.url.toString()
             return if (uri.contains("/")) {
@@ -84,12 +92,28 @@ class SingleViewInstaller(
                 return !uri.contains("http")
             } else true
         }
+
+        override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+            super.onPageStarted(view, url, favicon)
+            pageState = pageStarted
+        }
+
+        override fun onPageFinished(view: WebView?, url: String?) {
+            super.onPageFinished(view, url)
+            pageState = pageFinished
+        }
+
+        override fun onPageCommitVisible(view: WebView?, url: String?) {
+            super.onPageCommitVisible(view, url)
+            pageState = pageCommitVisible
+        }
+
     }
     
     inner class SingleWebChromeClient(
         private val requestPermissionLauncher: ActivityResultLauncher<String>
     ) : WebChromeClient() {
-
+        private var windowState: Boolean = false
         override fun onShowFileChooser(
             webView: WebView,
             filePathCallback: ValueCallback<Array<Uri>>,
@@ -98,6 +122,21 @@ class SingleViewInstaller(
             requestPermissionLauncher.launch(Manifest.permission.CAMERA)
             singleFPCallback = filePathCallback
             return true
+        }
+
+        override fun onCloseWindow(window: WebView?) {
+            super.onCloseWindow(window)
+            windowState = false
+        }
+
+        override fun onCreateWindow(
+            view: WebView?,
+            isDialog: Boolean,
+            isUserGesture: Boolean,
+            resultMsg: Message?
+        ): Boolean {
+            windowState = true
+            return super.onCreateWindow(view, isDialog, isUserGesture, resultMsg)
         }
     }
 }
